@@ -10,7 +10,7 @@ int main(void) {
     entrance = floors * apartments;
     out_entrance = ceil((float)(apartment_number / entrance));
     out_floor = ceil((apartment_number - ((out_entrance-1) * apartments * floors)) / apartments);
-    printf("%d, %d", (int)out_entrance, (int)out_floor);
+    printf("%d, %d\n", (int)out_entrance, (int)out_floor);
 
     return 0;
 }
