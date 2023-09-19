@@ -1,0 +1,22 @@
+// конь - a - по горизонтали b - по вертикали //// ферзь - с - по горизонтали d - по вертикали
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int a, b, e, f, c, d;
+    scanf("%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f);
+
+    if(!((abs(a - e) == 1 && abs(b - f) == 2) || (abs(a - e) == 2 && abs(b - f) == 1))){
+        printf("wrong move\n");
+        return 0;
+    }
+
+    if(( c + d == e + f) || (c == e) || (d == f) || ((c - d) == (e - f))){
+        printf("killed\n");
+    }
+    else{
+        printf("alive\n");
+    }
+
+    return 0;
+}
