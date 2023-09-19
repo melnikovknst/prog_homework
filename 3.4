@@ -5,8 +5,7 @@
 int main(void) {
     float sum = 0.0;
     
-    for (int i = 50; i > 0; i--)
-        sum = sqrt(sum + i);
+    for (int i = 50; i > 0; i--) sum = sqrt(i + sum);
     printf("%f", sum);
     
     return 0;
