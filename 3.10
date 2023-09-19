@@ -3,23 +3,19 @@
 
 
 int factorial(int digit) {
-    if (digit == 0)
-        return 1;
-    else
-        return digit * factorial(digit - 1);
+    if (digit == 0) return 1;
+    else return digit * factorial(digit - 1);
 }
 
 
 int main(void) {
-    int j, n;
-    float sum = 0.0;
+    int n;
+    float sum = 0;
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
-        float inter_sum = 1.0;
-        for (j = i; j < 2 * n; j++) {
-            inter_sum *= (pow(-1, i) * (j + 1)) / (factorial(j - i + 1));
-        }
+        float inter_sum = 1;
+        for (int j = i; j < 2 * n; j++) inter_sum *= (pow(-1, i) * (j + 1)) / (factorial(j - i + 1));
         sum += inter_sum;
     }
     printf("%f\n", sum);
