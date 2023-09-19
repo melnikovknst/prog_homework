@@ -4,12 +4,10 @@
 
 
 int main(void) {
-    float p0 = 1.29, z = 1.25 * pow(10,-4), p = 1.29, h;
+    float p0 = 1.29, z = 1.25 * pow(10,-4), p = 1.1, h;
     
-    for (h = 0.0; p >= 1.0; h += 0.1) {
-        p = p0 * pow(e, -h * z);
-    }
-    printf("%f", h);
+    for (h = 0; p >= 1.0; h += 0.001) p = p0 * pow(e, -h * z);
+    printf("%f\n", h);
     
     return 0;
 }
