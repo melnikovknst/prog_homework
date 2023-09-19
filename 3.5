@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+#define pi acos(-1.0)
+
+int main(void) {
+    float s = 0.0;
+    for (int i = 10; i > 0; i--) {
+        s += pi / 10 * sin(pi / 10 * i - pi / 20);
+    }
+    printf("%f\n", s);
+    return 0;
+}
