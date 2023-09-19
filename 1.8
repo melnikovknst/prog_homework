@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    int floors, apartments, apartment_number;
+    float out_entrance, entrance, out_floor;
+    scanf("%d %d %d", &floors, &apartments, &apartment_number);
+    entrance = floors * apartments;
+    out_entrance = ceil((float)(apartment_number / entrance));
+    out_floor = ceil((apartment_number - ((out_entrance-1) * apartments * floors)) / apartments);
+
+    printf("%d, %d", (int)out_entrance, (int)out_floor);
+
+    return 0;
+}
