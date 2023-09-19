@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+    float a;
+    scanf("%f", &a);
+    
+    a *= a; //2
+    a *= a; //4
+    float b = a;
+    a *= a; // 8
+    float c = a;
+    a *= a;   // 16
+    a = a * b * c;   // 16 + 4 + 8
+    printf("%f",a);
+    
+    return 0;
+}
