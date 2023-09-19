@@ -5,12 +5,10 @@ int main(void) {
     int n, k, m;
     scanf("%d %d %d", &n, &k, &m);
 
-    if(abs(k - m) > (n - abs(k - m))){
+    if(abs(k - m) > (n - abs(k - m)))
         printf("%d\n", n - abs(k - m));
-    }
-    else{
+    else
         printf("%d\n",abs(k - m));
-    }
 
     return 0;
 }
