@@ -11,10 +11,9 @@ int main(void) {
         printf("wrong move\n");
         return 0;
     }
-    if(( c + d == e + f) || (c == e) || (d == f) || ((c - d) == (e - f)))
-        printf("killed\n");
-    else
-        printf("alive\n");
+    
+    if(( c + d == e + f) || (c == e) || (d == f) || ((c - d) == (e - f))) printf("killed\n");
+    else printf("alive\n");
 
     return 0;
 }
