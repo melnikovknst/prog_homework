@@ -3,14 +3,15 @@
 
 
 int main(void) {
-    int floors, apartments, apartment_number;
-    float out_entrance, entrance, out_floor;
-    scanf("%d %d %d", &floors, &apartments, &apartment_number);
+    int floors, apartments, apartmentNumber;
+    float outEntrance, entrance, outFloor;
+    scanf("%d %d %d", &floors, &apartments, &apartmentNumber);
     
     entrance = floors * apartments;
-    out_entrance = ceil((float)(apartment_number / entrance));
-    out_floor = ceil((apartment_number - ((out_entrance-1) * apartments * floors)) / apartments);
-    printf("%d, %d\n", (int)out_entrance, (int)out_floor);
+    outEntrance = ceil((float)(apartmentNumber / entrance));
+    outFloor = ceil((apartmentNumber - ((outEntrance-1) * apartments * floors)) / apartments);
+    printf("%d, %d\n", (int)outEntrance, (int)outFloor);
 
     return 0;
 }
+
