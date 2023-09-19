@@ -3,15 +3,14 @@
 
 
 int main(void) {
-    float x = 0.0, a = 0.0, b = 1.0;
-    
+    float x = 0, a = 0, b = 1;
+
     while (b-a > 0.00001) {
         x = (b + a) / 2;
-        if (signbit(a) != signbit(x))   //signbit - is x is negative
-            b = x;
-        else 
-            a = x;
-    printf("%f", x);
+        if (signbit(pow(a, 4) + 2 * pow(a, 3) - a - 1) == signbit(pow(x, 4) + 2 * pow(x, 3) - x - 1)) a = x;    // signbit(x) = 0 if x >= 0
+        else b = x;
+    }
+    printf("%f\n", x);
     
     return 0;
 }
