@@ -2,26 +2,20 @@
 
 
 int main(void) {
-    int left_bottom_1_x, left_bottom_1_y, right_top_1_x, right_top_1_y, left_bottom_2_x, left_bottom_2_y, right_top_2_x, right_top_2_y;
-    scanf("%d %d %d %d %d %d %d %d", &left_bottom_1_x, &left_bottom_1_y, &right_top_1_x, &right_top_1_y, &left_bottom_2_x, &left_bottom_2_y, &right_top_2_x, &right_top_2_y);
+    int lB1x, lB1y, rT1x, rT1y, lB2x, lB2y, rT2x, rT2y;
+    scanf("%d %d %d %d %d %d %d %d", &lB1x, &lB1y, &rT1x, &rT1y, &lB2x, &lB2y, &rT2x, &rT2y);
 
-    if (left_bottom_1_x < left_bottom_2_x)
-        printf("(%d,", left_bottom_1_x);
-    else
-        printf("(%d,", left_bottom_2_x);
-
-    if (left_bottom_1_y < left_bottom_2_y)
-        printf("%d) ", left_bottom_1_y);
-    else
-        printf("%d) ", left_bottom_2_y);
-    if (right_top_2_x < right_top_1_x)
-        printf("(%d,", right_top_1_x);
-    else
-        printf("(%d,", right_top_2_x);
-    if (right_top_2_y < right_top_1_y)
-        printf("%d)\n", right_top_1_y);
-    else
-        printf("%d)\n", right_top_2_y);
+    if (lB1x < lB2x) printf("(%d,", lB1x);
+    else printf("(%d,", lB2x);
+    
+    if (lB1y < lB2y) printf("%d) ", lB1y);
+    else printf("%d) ", lB2y);
+    
+    if (rT2x < rT1x) printf("(%d,", rT1x);
+    else printf("(%d,", rT2x);
+    
+    if (rT2y < rT1y) printf("%d)\n", rT1y);
+    else printf("%d)\n", rT2y);
 
     return 0;
 }
