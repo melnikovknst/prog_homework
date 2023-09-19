@@ -3,13 +3,13 @@
 
 
 int main(void){
-    float y, hours_angle;
+    float y, hoursAngle;
     scanf("%f", &y);
     hours_angle = (y * 180 / M_PI);
 
-    printf("%f ", (hours_angle - 30 * (floor)(hours_angle / 30)) * 12);  //Minutes angle
-    printf("%d ", (int)(hours_angle / 30));  //Hours
-    printf("%d\n", (int)((hours_angle - 30 * (floor)(hours_angle / 30)) * 12)/6); //Minutes
+    printf("%f ", (hoursAngle - 30 * (floor)(hoursAngle / 30)) * 12);  //Minutes angle
+    printf("%d ", (int)(hoursAngle / 30));  //Hours
+    printf("%d\n", (int)((hoursAngle - 30 * (floor)(hoursAngle / 30)) * 12)/6); //Minutes
 
     return 0;
 }
