@@ -11,18 +11,18 @@ int factorial(int digit) {
 
 
 int main(void) {
-    int i, j, n;
+    int j, n;
     float sum = 0.0;
     scanf("%d", &n);
 
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         float inter_sum = 1.0;
         for (j = i; j < 2 * n; j++) {
             inter_sum *= (pow(-1, i) * (j + 1)) / (factorial(j - i + 1));
         }
         sum += inter_sum;
     }
-    printf("%f", sum);
+    printf("%f\n", sum);
 
     return 0;
 }
