@@ -2,21 +2,18 @@
 #include <math.h>
 
 int factorial(int digit) {
-    if (digit == 0) {
+    if (digit == 0) 
         return 1;
-    }
-    else {
+    else 
         return digit * factorial(digit - 1);
-    }
 }
 
 int main(void) {
     int x, n;
     float sum = 0.0;
     scanf("%d %d", &x, &n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
         sum += (float)(pow(x, i) / factorial(i) * pow(-1, i));
-    }
     printf("%f", sum);
     return 0;
 }
