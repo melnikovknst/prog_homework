@@ -5,8 +5,7 @@
 int main(void) {
     float s = 0;
     
-    for (int i = 10; i > 0; i--)
-        s += M_PI / 10 * sin(M_PI / 10 * i - M_PI / 20);
+    for (int i = 10; i > 0; i--) s += M_PI / 10 * sin(M_PI / 10 * i - M_PI / 20);
     printf("%f\n", s);
     
     return 0;
